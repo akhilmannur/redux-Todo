@@ -27,10 +27,7 @@ const ListToDo = () => {
   const handleCancelEdit = (todo) => {
     dispatch(cancel({ todo: todo.value }));
   };
-  const handleCheckboxChange = (todo) => {
-    // Assuming you have Redux set up
-    dispatch(updateTodoCompletion({ todo, completed: !todo.completed }));
-  };
+  
   
 
   return (
@@ -40,11 +37,6 @@ const ListToDo = () => {
           <MDBCardBody key={index}>
             <MDBListGroup horizontal className="rounded-0 bg-transparent">
               <MDBListGroupItem className="d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
-                <MDBCheckbox
-                  name="flexCheck"
-                  value=""
-                  id="flexCheckChecked"  
-                />
               </MDBListGroupItem>
               <MDBListGroupItem className="px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
                 {todo.isEditing ? (
