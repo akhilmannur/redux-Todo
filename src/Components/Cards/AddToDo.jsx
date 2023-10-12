@@ -17,7 +17,8 @@ const AddToDo = () => {
   const dispatch = useDispatch();
 
 
-  const handleAddTodo = () => {
+  const handleAddTodo = (e) => {
+    e.preventDefault();
     const todoText = todoRef.current.value;
     dispatch(add({ todo: todoText }));
     todoRef.current.value = ""; 
@@ -35,8 +36,9 @@ const AddToDo = () => {
               <MDBCardBody className="py-4 px-4 px-md-5">
                 <p className="h1 text-center mt-3 mb-4 pb-3 text-primary">
            
-                  <h2>SUCSESS THROUGH CREATING TO DO</h2>
+                  
                 </p>
+                <h2>SUCSESS THROUGH CREATING TO DO</h2>
                 <div className="pb-2">
                   <MDBCard>
                     <MDBCardBody>
