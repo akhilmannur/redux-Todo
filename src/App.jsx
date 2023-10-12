@@ -1,6 +1,8 @@
 import React from 'react'
 import './App.css'
-import Home from './Components/Home'
+import AddToDo from './Components/Cards/AddToDo';
+import ListToDo from './Components/Cards/ListToDo'
+
 
 
 function App() {
@@ -8,7 +10,10 @@ function App() {
 
   return (
     <>
-<Home/>
+    <AddToDo/>
+    <ListToDo/>
+  
+
     </>
   )
 }
